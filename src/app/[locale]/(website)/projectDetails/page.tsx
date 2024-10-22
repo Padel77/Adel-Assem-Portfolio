@@ -1,3 +1,4 @@
+"use client"
 import { FaCode } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
