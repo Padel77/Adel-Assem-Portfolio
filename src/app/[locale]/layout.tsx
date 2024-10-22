@@ -23,7 +23,7 @@ export const metadata: Metadata & {
   description:
     "Welcome to Adel Assem's portfolio. I am a MERN stack developer specializing in building high-quality web applications. Explore my projects and get in touch for collaboration.",
   verification: {
-    google: "zClMKi9biXYt2s7E6hRCHA9qzlG9ijHtoXB-C3cGoVM",
+    google: "xNgABBAeM6GxqgU9WmSX6q60_MpFsZi4ZR2IA4kav88",
   },
 };
 

@@ -10,17 +10,19 @@ import { VscSymbolClass } from "react-icons/vsc";
 import { useMemo } from "react";
 export default function Skills() {
   const skillsData = useMemo(
-    () =>  [
-    { id: 1, text: "javascript", icon: <IoLogoJavascript /> },
-    { id: 2, text: "react", icon: <IoLogoReact /> },
-    { id: 3, text: "redux-toolkit", icon: <TbBrandRedux /> },
-    { id: 4, text: "html", icon: <IoLogoHtml5 /> },
-    { id: 5, text: "css", icon: <FaCss3Alt /> },
-    { id: 6, text: "bootstrap", icon: <FaBootstrap /> },
-    { id: 7, text: "sass", icon: <IoLogoSass /> },
-    { id: 8, text: "tailwind", icon: <RiTailwindCssLine /> },
-    { id: 9, text: "OOP", icon: <VscSymbolClass /> },
-  ],[]);
+    () => [
+      { id: 1, text: "javascript", icon: <IoLogoJavascript /> },
+      { id: 2, text: "react", icon: <IoLogoReact /> },
+      { id: 3, text: "redux-toolkit", icon: <TbBrandRedux /> },
+      { id: 4, text: "html", icon: <IoLogoHtml5 /> },
+      { id: 5, text: "css", icon: <FaCss3Alt /> },
+      { id: 6, text: "bootstrap", icon: <FaBootstrap /> },
+      { id: 7, text: "sass", icon: <IoLogoSass /> },
+      { id: 8, text: "tailwind", icon: <RiTailwindCssLine /> },
+      { id: 9, text: "OOP", icon: <VscSymbolClass /> },
+    ],
+    []
+  );
   return (
     <div className="relative lg:top-[-100px] mb-[80px] lg:mb-5 container mx-auto px-4">
       <div className="flex flex-wrap w-full gap-8 justify-center">
