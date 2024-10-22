@@ -1,18 +1,21 @@
-"use client"
-import { FaCode } from "react-icons/fa6";
-import { FaExternalLinkAlt } from "react-icons/fa";
-
-import projecyData from "../projects/Data";
+import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-export default function ProjectDetails() {
-  const searchParams = useSearchParams();
-  const id = searchParams.get('id');
+import React from "react";
+import projecyData from "../Data";
+interface projectProps {
+  params: {
+    id: number;
+  };
+}
+
+export default async function projectDetailsPage({
+  params: { id },
+}: projectProps) {
   return (
     <div className="container mx-auto p-3">
       {projecyData.map(
         (item) =>
-          item.id === id && (
+          item.id === id.toString() && (
             <div
               key={item.id}
               className="flex items-center justify-start flex-col text-2xl gap-4 text-white px-10 md:20"
