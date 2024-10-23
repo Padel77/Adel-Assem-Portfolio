@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Head from "next/head";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { Tajawal } from "next/font/google";
 import { getMessages } from "next-intl/server";
@@ -18,7 +19,8 @@ export const metadata: Metadata & {
 } = {
   title: {
     template: "%s | Adel Assem Portfolio | MERN Stack Developer",
-    default: "Adel Assem Portfolio | MERN Stack Developer | Full-Stack Development Services",
+    default:
+      "Adel Assem Portfolio | MERN Stack Developer | Full-Stack Development Services",
   },
   description:
     "Welcome to Adel Assem's portfolio. I am a MERN stack developer specializing in building high-quality web applications. Explore my projects and get in touch for collaboration.",
@@ -51,6 +53,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
           <Analytics />
+          <SpeedInsights />
         </NextIntlClientProvider>
       </body>
     </html>

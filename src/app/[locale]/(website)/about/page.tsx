@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
+import type { Metadata } from "next";
 
 import man_working from "@../../../public/assets/man_working.png";
 import wired_lineal from "@../../../public/assets/wired-lineal-268-avatar-man.gif";
@@ -8,7 +9,17 @@ import wired_lineal_1676 from "@../../../public/assets/wired-lineal-1676-telepho
 import wired_lineal_1141 from "@../../../public/assets/wired-lineal-1141-email.gif";
 import wired_lineal_245 from "@../../../public/assets/wired-lineal-245-edit-document.gif";
 import Link from "next/link";
-
+export const metadata: Metadata & {
+  title: { template: string; default: string };
+  description: string;
+} = {
+  title: {
+    template: "%s | Adel Assem Portfolio | MERN Stack Developer",
+    default: "Adel Assem Portfolio | MERN Stack Developer | Full-Stack Development Services",
+  },
+  description:
+    "Welcome to Adel Assem's portfolio. I am a MERN stack developer specializing in building high-quality web applications. Explore my projects and get in touch for collaboration.",
+};
 export default function About() {
   return (
     <div className="relative lg:top-[-120px] mb-[80px] lg:mb-5">
