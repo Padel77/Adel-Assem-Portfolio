@@ -1,24 +1,33 @@
 "use client";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { toast } from "react-toastify";
+import ReCAPTCHA from "react-google-recaptcha";
+
 export default function Contact() {
+  const recaptcha = useRef<ReCAPTCHA | null>(null);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const serviceId = "service_kbcljzi";
-    const templateId = "template_vw43tmu";
-    const publicKey = "9bjtBYO7h7dTY_Ejc";
+    if (!recaptcha.current?.getValue()) {
+      toast.error("Please verify that you are not a robot", {
+        hideProgressBar: true,
+        position: "top-right",
+      });
+      return;
+    }
+    const serviceId = "service_5xnlq7a";
+    const templateId = "template_6vgkcuy";
+    const publicKey = "J0xLB3hMSaaXxdBYM";
 
     const template_params = {
       from_name: name,
       from_email: email,
-      to_name: "konuz",
+      to_name: "adel",
       message: message,
       phone: phone,
     };
@@ -111,6 +120,7 @@ export default function Contact() {
                   <MdKeyboardArrowRight className="text-[22px] font-bold" />
                 </button>
               </div>
+                <ReCAPTCHA ref={recaptcha} sitekey={"6LcTbWoqAAAAAKnMcIX8LSd3GHPf1eTxGnrjsjII"} />
             </div>
           </div>
         </form>
