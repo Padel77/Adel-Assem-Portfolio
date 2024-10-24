@@ -129,7 +129,7 @@ export default function Contact() {
               </div>
               <ReCAPTCHA
                 ref={recaptcha}
-                sitekey={process.env.REACT_APP_SITE_KEY || ""}
+                sitekey={"6LcTbWoqAAAAAKnMcIX8LSd3GHPf1eTxGnrjsjII"}
               />
             </div>
           </div>
