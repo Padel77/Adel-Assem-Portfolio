@@ -11,15 +11,18 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
+  
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!recaptcha.current?.getValue()) {
+    const recaptchaValue = recaptcha.current?.getValue();
+    if (!recaptchaValue) {
       toast.error("Please verify that you are not a robot", {
         hideProgressBar: true,
         position: "top-right",
       });
       return;
     }
+    
     const serviceId = "service_5xnlq7a";
     const templateId = "template_6vgkcuy";
     const publicKey = "J0xLB3hMSaaXxdBYM";
@@ -30,7 +33,9 @@ export default function Contact() {
       to_name: "adel",
       message: message,
       phone: phone,
+      "g-recaptcha-response": recaptchaValue,
     };
+
     emailjs
       .send(serviceId, templateId, template_params, publicKey)
       .then((response) => {
@@ -43,6 +48,7 @@ export default function Contact() {
         setEmail("");
         setMessage("");
         setPhone("");
+        recaptcha.current?.reset(); // Reset reCAPTCHA
       })
       .catch((error) => {
         toast.error("Transmission failed", {
@@ -52,6 +58,7 @@ export default function Contact() {
         console.error("Error sending email:", error);
       });
   };
+
   return (
     <>
       <div
@@ -120,7 +127,7 @@ export default function Contact() {
                   <MdKeyboardArrowRight className="text-[22px] font-bold" />
                 </button>
               </div>
-                <ReCAPTCHA ref={recaptcha} sitekey={"6LcTbWoqAAAAAKnMcIX8LSd3GHPf1eTxGnrjsjII"} />
+              <ReCAPTCHA ref={recaptcha} sitekey={"6LcTbWoqAAAAAKnMcIX8LSd3GHPf1eTxGnrjsjII"} />
             </div>
           </div>
         </form>
