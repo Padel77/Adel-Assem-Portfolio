@@ -11,7 +11,7 @@ export default function Contact() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const recaptchaValue = recaptcha.current?.getValue();
@@ -22,7 +22,7 @@ export default function Contact() {
       });
       return;
     }
-    
+
     const serviceId = "service_5xnlq7a";
     const templateId = "template_6vgkcuy";
     const publicKey = "J0xLB3hMSaaXxdBYM";
