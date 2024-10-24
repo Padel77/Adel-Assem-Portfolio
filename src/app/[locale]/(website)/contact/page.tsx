@@ -127,7 +127,10 @@ export default function Contact() {
                   <MdKeyboardArrowRight className="text-[22px] font-bold" />
                 </button>
               </div>
-              <ReCAPTCHA ref={recaptcha} sitekey={"6LcTbWoqAAAAAKnMcIX8LSd3GHPf1eTxGnrjsjII"} />
+              <ReCAPTCHA
+                ref={recaptcha}
+                sitekey={process.env.REACT_APP_SITE_KEY as string}
+              />
             </div>
           </div>
         </form>
