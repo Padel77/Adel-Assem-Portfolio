@@ -5,21 +5,27 @@ import { IoLogoReact } from "react-icons/io5";
 import { FaBootstrap } from "react-icons/fa";
 import { RiTailwindCssLine } from "react-icons/ri";
 import { IoLogoSass } from "react-icons/io";
-import { TbBrandRedux } from "react-icons/tb";
+import { TbBrandAbstract, TbBrandAngular, TbBrandNextjs, TbBrandNodejs, TbBrandRedux, TbBrandThreejs } from "react-icons/tb";
 import { VscSymbolClass } from "react-icons/vsc";
 import { useMemo } from "react";
 export default function Skills() {
   const skillsData = useMemo(
     () => [
       { id: 1, text: "javascript", icon: <IoLogoJavascript /> },
-      { id: 2, text: "react", icon: <IoLogoReact /> },
-      { id: 3, text: "redux-toolkit", icon: <TbBrandRedux /> },
-      { id: 4, text: "html", icon: <IoLogoHtml5 /> },
-      { id: 5, text: "css", icon: <FaCss3Alt /> },
-      { id: 6, text: "bootstrap", icon: <FaBootstrap /> },
-      { id: 7, text: "sass", icon: <IoLogoSass /> },
-      { id: 8, text: "tailwind", icon: <RiTailwindCssLine /> },
-      { id: 9, text: "OOP", icon: <VscSymbolClass /> },
+      { id: 2, text: "OOP", icon: <VscSymbolClass /> },
+      { id: 3, text: "react", icon: <IoLogoReact /> },
+      { id: 4, text: "nextjs", icon: <TbBrandNextjs /> },
+      { id: 5, text: "angular", icon: <TbBrandAngular /> },
+      { id: 6, text: "nodejs", icon: <TbBrandNodejs /> },
+      { id: 7, text: "tailwind", icon: <RiTailwindCssLine /> },
+      { id: 8, text: "Threejs", icon: <TbBrandThreejs /> },
+      { id: 9, text: "Abstract", icon: <TbBrandAbstract /> },
+      { id: 10, text: "redux-toolkit", icon: <TbBrandRedux /> },
+      { id: 11, text: "html", icon: <IoLogoHtml5 /> },
+      { id: 12, text: "css", icon: <FaCss3Alt /> },
+      { id: 13, text: "sass", icon: <IoLogoSass /> },
+      { id: 14, text: "bootstrap", icon: <FaBootstrap /> },
+      
     ],
     []
   );

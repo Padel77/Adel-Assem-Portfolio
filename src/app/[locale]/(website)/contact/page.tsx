@@ -4,9 +4,13 @@ import emailjs from "@emailjs/browser";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useTranslations } from "next-intl";
 
 export default function Contact() {
   const recaptcha = useRef<ReCAPTCHA | null>(null);
+  const REACT_APP_SITE_KEY = process.env.SITE_SECRET;
+  console.log("RECAPTCHA SITE KEY:", REACT_APP_SITE_KEY);
+  const t = useTranslations("contact");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -66,10 +70,10 @@ export default function Contact() {
       relative lg:top-[-120px] mb-[80px] lg:mb-5"
       >
         <p className="text-xl sm:text-3xl capitalize text-[#6fc3c5]">
-          SEND ME A MESSAGE
+          {t("title")}
         </p>
         <p className="text-xl my-3 text-[#3e6e6f] text-center">
-          Please provide your information and I will get back to you.
+          {t("description")}
         </p>
         <form
           onSubmit={handleSubmit}
@@ -81,7 +85,7 @@ export default function Contact() {
                 <div className="sm:w-full px-3 mb-3">
                   <input
                     type="text"
-                    placeholder="Full Name"
+                    placeholder={t("fullName")}
                     value={name}
                     required
                     onChange={(e) => setName(e.target.value)}
@@ -91,7 +95,7 @@ export default function Contact() {
                 <div className="sm:w-full px-3 mb-3">
                   <input
                     type="email"
-                    placeholder="E-mail address"
+                    placeholder={t("emailAdress")}
                     value={email}
                     required
                     onChange={(e) => setEmail(e.target.value)}
@@ -101,7 +105,7 @@ export default function Contact() {
                 <div className="sm:w-full px-3 mb-3">
                   <input
                     type="number"
-                    placeholder="Phone Number"
+                    placeholder={t("phoneNumber")}
                     className="border-2 text-white p-2 w-full focus:border-[#6fc3c5] outline-none bg-transparent"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
@@ -113,7 +117,7 @@ export default function Contact() {
                     id="message"
                     cols={30}
                     rows={3}
-                    placeholder="Your message here"
+                    placeholder={t("message")}
                     value={message}
                     required
                     onChange={(e) => setMessage(e.target.value)}
@@ -123,7 +127,7 @@ export default function Contact() {
               </div>
               <div className="text-right mt-4 md:mt-5 flex justify-end">
                 <button className="border-2 flex items-center justify-center cursor-pointer  gap-2 border-[#6fc3c5] rounded px-6 py-2 text-[#6fc3c5] hover:bg-[#6fc3c5] hover:text-white transition-colors duration-300">
-                  Send a Message
+                  {t("submitButton")}
                   <MdKeyboardArrowRight className="text-[22px] font-bold" />
                 </button>
               </div>

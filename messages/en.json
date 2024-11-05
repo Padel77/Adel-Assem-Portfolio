@@ -1,6 +1,6 @@
 {
   "HomePage": {
-    "title": "Home Page"
+    "title": "Hi all, I'm Adel Assem"
   },
   "header": {
     "home": "Home",
@@ -15,39 +15,20 @@
     "elmohands": "El Mohandas"
   },
   "about": {
-    "aboutUs": "About Us",
-    "aboutElmohandas": "The best company that buys used furniture in Riyadh has extensive experience in acquiring furniture in all regions of Riyadh, so if you want to get rid of old furniture easily and at satisfactory prices, you can contact us",
-    "year2024": "The company has provided the best service for buying used furniture in all regions of Riyadh",
-    "yearTitle": "Year 2024",
-    "yearContent": " The company has provided the best service for buying used furniture in all regions of Riyadh  ",
-    "earlyYearTitle": "Early 2014",
-    "earlyYearsContent": "In a bold step, the company entered the market for used equipment in Riyadh in an unprecedented step, El Mohandas Company, one of the leading companies in the field of furniture",
-    "Changelog": "Changelog",
-    "morelastWork": "More of our work",
-    "morelastWorkcontent": ""
+    "summary": "With a solid foundation from the Information Technology Institute as a Full Stack Developer and a diploma in human resources management, my journey through the tech landscape has been marked by a commitment to excellence and innovation. we leveraged my expertise in React and Next.js to deliver seamless and responsive user interfaces, enhancing the digital experience for our clients. I am excited to bring my skills to a dynamic team that is passionate about creating innovative solutions.",
+    "name": "Adel Assem Mahmmed",
+    "country": "Egypt , Cairo",
+    "phoneNumber": "+201050112675",
+    "cvDownLoad": "Download CV"
   },
-  "adversting": {
-    "adverstingTitle": "Adversting",
-    "adverstingContent": "Contact us and exchange your old furniture for new furniture and sell your furniture at the best prices",
-    "adverstingButton": "Buy Now",
-    "conectWithUs": "Contact Us",
-    "contactNumber": "(057) 5645308"
-  },
+  
   "contact": {
-    "contactUs": "Contact Us",
-    "contactDescription": "To contact us, you can call us on the following number",
-    "contactEmail": "elmohandas@orgniz.com",
-    "contactAddress": "Riyadh - Al Naseem District - Al Naseem Street",
-    "copyRight": "All Copyrights are reserved by El Mohandas 2024",
-    "importsLink": "Important Links",
-    "FollowUS": "Follow us on",
-    "contactContent": "We buy used furniture in Riyadh at the best prices, high quality, and excellent service",
-    "Home": "Home",
-    "FinalWork": "Final Work",
-    "CommonQuestions": "Common Questions",
-    "WhatToBuy": "What to Buy?",
-    "ContactUs": "Contact Us",
-    "contactNumber": "(057) 5645308",
-    "whatsapp": "Elmohands"
+    "title": "SEND ME A MESSAGE",
+    "description": "Please provide your information and I will get back to you.",
+    "fullName": "Full Name",
+    "emailAdress": "Email Adress",
+    "phoneNumber": "Phone Number",
+    "message": "Message",
+    "submitButton" : "Send"
   }
 }

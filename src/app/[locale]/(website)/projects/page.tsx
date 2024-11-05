@@ -5,8 +5,10 @@ import { useState } from "react";
 import load from "@../../../public/assets/load.gif";
 import Image from "next/image";
 import Link from "next/link";
+import { useLocale } from "next-intl";
 
 export default function Projects() {
+  const locale = useLocale();
   const [typePro, setTypePro] = useState("all");
   const [loading, setLoading] = useState(true);
 
@@ -45,6 +47,12 @@ export default function Projects() {
               ReactJs
             </p>
             <p
+              className={typePro == "next" ? "btn active" : "btn"}
+              onClick={() => handleBtn("next")}
+            >
+              NextJs
+            </p>
+            <p
               className={typePro == "js" ? "btn active" : "btn"}
               onClick={() => handleBtn("js")}
             >
@@ -63,7 +71,7 @@ export default function Projects() {
                     key={items.id}
                   >
                     <Link
-                      href={`/projects/${items?.id}`}
+                      href={`/${locale}/projects/${items?.id}`}
                       className="image_project relative w-[280px] md:w-full
                 h-[250px] max-h-[400px] inline-flex items-center justify-center
                 rounded-md bg-white overflow-hidden border-2 border-cyan-700"
@@ -72,6 +80,7 @@ export default function Projects() {
                         src={items.img}
                         alt="project"
                         className="image w-full"
+                        lazyBoundary={"100px"}
                       />
                       <div className="mainClass">
                         <div className="flex items-center justify-center text-slate-950">

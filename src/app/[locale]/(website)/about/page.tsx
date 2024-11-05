@@ -9,29 +9,27 @@ import wired_lineal_1676 from "@../../../public/assets/wired-lineal-1676-telepho
 import wired_lineal_1141 from "@../../../public/assets/wired-lineal-1141-email.gif";
 import wired_lineal_245 from "@../../../public/assets/wired-lineal-245-edit-document.gif";
 import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 export const metadata: Metadata & {
   title: { template: string; default: string };
   description: string;
 } = {
   title: {
     template: "%s | Adel Assem Portfolio | MERN Stack Developer",
-    default: "Adel Assem Portfolio | MERN Stack Developer | Full-Stack Development Services",
+    default:
+      "Adel Assem Portfolio | MERN Stack Developer | Full-Stack Development Services",
   },
   description:
     "Welcome to Adel Assem's portfolio. I am a MERN stack developer specializing in building high-quality web applications. Explore my projects and get in touch for collaboration.",
 };
-export default function About() {
+export default async function About() {
+  const t = await getTranslations("about");
   return (
     <div className="relative lg:top-[-120px] mb-[80px] lg:mb-5">
       <div className="container mx-auto px-5 md:px-14 justify-center items-center lg:items-start gap-4">
         <div className="flex flex-col justify-center items-center gap-4">
           <p className="md:w-[70%] tracking-wider px-3  mx-auto text-2xl text-center leading-10 text-white ">
-            With a solid foundation from the Information Technology Institute as
-            a Full Stack Developer and a diploma in human resources management,
-            my journey through the tech landscape has been marked by a
-            commitment to excellence and innovation. we leveraged my expertise
-            in React and Next.js to deliver seamless and responsive user
-            interfaces, enhancing the digital experience for our clients.
+            {t("summary")}
           </p>
           <div className="flex items-center flex-col lg:flex-row justify-center gap-2 mx-auto">
             <div>
@@ -53,7 +51,7 @@ export default function About() {
                   height={50}
                   width={50}
                 />
-                Adel Assem Mahmmed
+                {t("name")}
               </li>
               <li className="flex gap-3 items-center text-lg md:text-xl text-wrap ">
                 <Image
@@ -63,7 +61,7 @@ export default function About() {
                   height={50}
                   width={50}
                 />
-                Egypt
+                {t("country")}
               </li>
               <li className="flex gap-3 items-center text-lg md:text-xl text-wrap ">
                 <Link
@@ -77,7 +75,7 @@ export default function About() {
                     height={50}
                     width={50}
                   />
-                  01050112675
+                  {t("phoneNumber")}
                 </Link>
               </li>
               <li className="flex gap-3 items-center text-lg md:text-xl text-wrap ">
@@ -108,7 +106,8 @@ export default function About() {
                   href="/assets/Adel_Assem_Mohamed.pdf"
                   className="flex items-center gap-2"
                 >
-                  Download CV <FiDownload />
+                  {t("cvDownLoad")}
+                  <FiDownload />
                 </a>
               </li>
             </ul>

@@ -1,8 +1,9 @@
+import logo from '@../../../public/assets/real-house.png'
 const projecyData = [
   {
     id: "1",
     type: "react",
-    img: "./assets/real-house.png",
+    img: logo,
     title: "RealHouse",
     tools: ["Reactjs", "tailwindcss", "reduxToolkit", "firebase", "swiper"],
     link: "https://real-house-blush.vercel.app/",
@@ -13,7 +14,7 @@ const projecyData = [
   {
     id: "2",
     type: "react",
-    img: "./assets/food-ecommerce-reactjs.png",
+    img: logo,
     title: "Food-E-commerce",
     tools: [
       "Reactjs",
@@ -32,7 +33,7 @@ const projecyData = [
   {
     id: "3",
     type: "js",
-    img: "./assets/e-commerce-project-js.png",
+    img: logo,
     title: "Ecommerce-Project-js",
     tools: ["Html", "Css (Sass)", "Javascript"],
     link: "https://js-e-commerce-project.vercel.app/",
@@ -43,7 +44,7 @@ const projecyData = [
   {
     id: "4",
     type: "react",
-    img: "./assets/DashboardReact.png",
+    img: logo,
     title: "React-Admin-Dashboard",
     tools: ["Reactjs", "material-ui", "css", "react-hook-form", "nivo"],
     link: "https://react-admin-dashboard-tau-nine.vercel.app/",
@@ -53,7 +54,7 @@ const projecyData = [
   {
     id: "5",
     type: "react",
-    img: "./assets/hospital.png",
+    img: logo,
     title: "Hospital-Website",
     tools: ["Reactjs", "tailwindcss", "i18next", "Aos"],
     link: "https://hospital-website-alpha.vercel.app/",
@@ -64,7 +65,7 @@ const projecyData = [
   {
     id: "6",
     type: "react",
-    img: "./assets/deserts.png",
+    img: logo,
     title: "desert safaritours",
     tools: ["Reactjs", "tailwindcss", "antd", "react-icons"],
     link: "https://desert-safaritours.vercel.app/",
@@ -76,7 +77,7 @@ const projecyData = [
   {
     id: "7",
     type: "react",
-    img: "./assets/millionaire-quiz-app-reactjs.png",
+    img: logo,
     title: "millionaire-quiz-app-reactjs",
     tools: ["Reactjs", "Html", "Css", "use-sound"],
     link: "https://millionaire-quiz-app-six.vercel.app/",
@@ -87,7 +88,7 @@ const projecyData = [
   {
     id: "8",
     type: "js",
-    img: "./assets/template-one-leon-vercel-app-html-css.png",
+    img: logo,
     title: "leon-template-one",
     tools: ["Html", "Css", "Javascript"],
     link: "https://template-one-leon.vercel.app/",
@@ -97,7 +98,7 @@ const projecyData = [
   {
     id: "9",
     type: "react",
-    img: "./assets/movies-app-react-js.png",
+    img: logo,
     title: "movies-app-react-js",
     tools: ["Reactjs", "Css", "axios", "react-spinners"],
     link: "https://movies-app-react-js-omega.vercel.app/",
@@ -108,7 +109,7 @@ const projecyData = [
   {
     id: "10",
     type: "js",
-    img: "./assets/full-website-barber.png",
+    img: logo,
     title: "full-website-barber",
     tools: ["Html", "Css", "Javascript"],
     link: "https://website-barber.vercel.app/",
@@ -118,7 +119,7 @@ const projecyData = [
   {
     id: "11",
     type: "js",
-    img: "./assets/responsive-animate-food.png",
+    img: logo,
     title: "responsive-animate-food",
     tools: ["Html", "Css", "Javascript"],
     link: "https://responsive-animate-food.vercel.app/",
@@ -129,7 +130,7 @@ const projecyData = [
   {
     id: "12",
     type: "js",
-    img: "./assets/dashboard-html-css.png",
+    img: logo,
     title: "Dashboard",
     tools: ["Html", "Css"],
     link: "https://dashboard-html-css-pied.vercel.app/",

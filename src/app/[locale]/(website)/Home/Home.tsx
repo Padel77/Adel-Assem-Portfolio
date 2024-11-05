@@ -1,8 +1,11 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 function TypedEffect() {
-  const words = ["Hi all, I'm Adel Assem"];
+  const t = useTranslations("HomePage");
+
+  const words = [t("title")];
   const [text] = useTypewriter({
     words,
     loop: 1,
@@ -10,7 +13,12 @@ function TypedEffect() {
     deleteSpeed: 80,
   });
   const [text2] = useTypewriter({
-    words: ["Front End Developer","Mearn Stack Developer", "ReactJs Developer" ,"NextJs Developer" ],
+    words: [
+      "Front End Developer",
+      "Mearn Stack Developer",
+      "ReactJs Developer",
+      "NextJs Developer",
+    ],
     loop: true,
     typeSpeed: 120,
     deleteSpeed: 80,
@@ -28,7 +36,9 @@ function TypedEffect() {
           {" "}
           {text2}
         </h2>
-        <p className="md:text-[17px] text-[13px] capitalize text-[#3e6e6f]">Interactive, Responsive, User-Friendly, Dynamic, Modern.</p>
+        <p className="md:text-[17px] text-[13px] capitalize text-[#3e6e6f]">
+          Interactive, Responsive, User-Friendly, Dynamic, Modern.
+        </p>
       </div>
     </>
   );

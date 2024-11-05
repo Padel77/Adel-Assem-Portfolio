@@ -11,6 +11,8 @@ interface projectProps {
 export default async function projectDetailsPage({
   params: { id },
 }: projectProps) {
+  console.log("id", id);
+
   return (
     <div className="container mx-auto p-3">
       {projecyData.map(
