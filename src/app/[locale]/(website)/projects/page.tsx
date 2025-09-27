@@ -47,8 +47,8 @@ export default function Projects() {
               ReactJs
             </p>
             <p
-              className={typePro == "next" ? "btn active" : "btn"}
-              onClick={() => handleBtn("next")}
+              className={typePro == "nextjs" ? "btn active" : "btn"}
+              onClick={() => handleBtn("nextjs")}
             >
               NextJs
             </p>
@@ -80,7 +80,6 @@ export default function Projects() {
                         src={items.img}
                         alt="project"
                         className="image w-full"
-                        lazyBoundary={"100px"}
                       />
                       <div className="mainClass">
                         <div className="flex items-center justify-center text-slate-950">

@@ -7,11 +7,28 @@ import { RiTailwindCssLine } from "react-icons/ri";
 import { IoLogoSass } from "react-icons/io";
 import { TbBrandAbstract, TbBrandAngular, TbBrandNextjs, TbBrandNodejs, TbBrandRedux, TbBrandThreejs } from "react-icons/tb";
 import { VscSymbolClass } from "react-icons/vsc";
+import { SiNestjs } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
 import { useMemo } from "react";
+import { Metadata } from "next";
+export const metadata: Metadata & {
+  title: { template: string; default: string };
+  description: string;
+} = {
+  title: {
+    template: "%s | Skills | Adel Assem | MERN Stack & Full-Stack Web Developer" ,
+    default:
+      "Explore the full range of skills and technologies used by Adel Assem, including MongoDB, Express, React, Node.js, TypeScript, Git, and more.",
+  },
+  description:
+    "Explore the full range of skills and technologies used by Adel Assem, including MongoDB, Express, React, Node.js, TypeScript, Git, and more.",
+};
 export default function Skills() {
   const skillsData = useMemo(
     () => [
       { id: 1, text: "javascript", icon: <IoLogoJavascript /> },
+      { id: 15, text: "nestjs", icon: <SiNestjs /> },
+      { id: 16, text: "express", icon: <SiExpress /> },
       { id: 2, text: "OOP", icon: <VscSymbolClass /> },
       { id: 3, text: "react", icon: <IoLogoReact /> },
       { id: 4, text: "nextjs", icon: <TbBrandNextjs /> },

@@ -5,7 +5,19 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useTranslations } from "next-intl";
-
+import { Metadata } from "next";
+export const metadata: Metadata & {
+  title: { template: string; default: string };
+  description: string;
+} = {
+  title: {
+    template: "%s | Contact Adel Assem | Hire MERN Stack Developer",
+    default:
+      "Looking to collaborate on your next web project? Contact Adel Assem, a MERN Stack Developer with expertise in full-stack development and web applications.",
+  },
+  description:
+    " Interested in working together or have a project in mind? I'd love to hear from you! Fill out the form below or connect via email.",
+};
 export default function Contact() {
   const recaptcha = useRef<ReCAPTCHA | null>(null);
   const REACT_APP_SITE_KEY = process.env.SITE_SECRET;

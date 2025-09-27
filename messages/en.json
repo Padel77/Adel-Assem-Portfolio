@@ -15,10 +15,12 @@
     "elmohands": "El Mohandas"
   },
   "about": {
-    "summary": "With a solid foundation from the Information Technology Institute as a Full Stack Developer and a diploma in human resources management, my journey through the tech landscape has been marked by a commitment to excellence and innovation. we leveraged my expertise in React and Next.js to deliver seamless and responsive user interfaces, enhancing the digital experience for our clients. I am excited to bring my skills to a dynamic team that is passionate about creating innovative solutions.",
+    "summary": "Specialized Full Stack Developer with a strong academic background from the Institute of Information Technology and certification in Human Resources Management. I have extensive experience in developing modern applications using React and Next.js for frontend development, and Node.js, NestJS, and Express for backend development. I focus on building comprehensive and innovative technical solutions that meet business requirements and enhance user experience.",
     "name": "Adel Assem Mahmmed",
     "country": "Egypt , Cairo",
     "phoneNumber": "+201050112675",
+     "KsaPhoneNumber": "+966503130638",
+    "email": "adelassem99@gmail.com",
     "cvDownLoad": "Download CV"
   },
   

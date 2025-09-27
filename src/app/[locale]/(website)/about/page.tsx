@@ -15,12 +15,12 @@ export const metadata: Metadata & {
   description: string;
 } = {
   title: {
-    template: "%s | Adel Assem Portfolio | MERN Stack Developer",
+    template: "%s | About Me | MERN Stack Developer | Adel Assem | Full Stack Web Development ",
     default:
-      "Adel Assem Portfolio | MERN Stack Developer | Full-Stack Development Services",
+      "Adel Assem about me | MERN Stack Developer | Full-Stack Development Services | Web Applications",
   },
   description:
-    "Welcome to Adel Assem's portfolio. I am a MERN stack developer specializing in building high-quality web applications. Explore my projects and get in touch for collaboration.",
+    "Learn more about Adel Assem, a MERN Stack Developer specializing in full-stack web development, responsive web apps, and scalable backend solutions.",
 };
 export default async function About() {
   const t = await getTranslations("about");
@@ -80,6 +80,21 @@ export default async function About() {
               </li>
               <li className="flex gap-3 items-center text-lg md:text-xl text-wrap ">
                 <Link
+                  href="tel:966503130638"
+                  className="flex items-center gap-3"
+                >
+                  <Image
+                    src={wired_lineal_1676}
+                    alt="logo"
+                    style={{ color: "transparent" }}
+                    height={50}
+                    width={50}
+                  />
+                  {t("KsaPhoneNumber")}
+                </Link>
+              </li>
+              <li className="flex gap-3 items-center text-lg md:text-xl text-wrap ">
+                <Link
                   href="mailto:adelassem99@gmail.com"
                   className="flex items-center gap-3"
                 >
@@ -90,7 +105,7 @@ export default async function About() {
                     height={50}
                     width={50}
                   />
-                  adelassem99@gmail.com
+                  {t("email")}
                 </Link>
               </li>
               <li className="flex gap-3 items-center text-lg md:text-xl text-wrap ">
